@@ -23,7 +23,13 @@
             "name":"nginx",
             "image":"kunwarf/multi-nginx",
             "hostname":"nginx",
-            "essential": true
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort":80,
+                    "containerPort":80
+                }
+            ]
         }
     ]
 }
