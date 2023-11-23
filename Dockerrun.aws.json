@@ -14,10 +14,16 @@
             "essential": false
         },
         {
-            "name":"client",
-            "image":"kunwarf/multi-client",
-            "hostname":"client",
+            "name":"worker",
+            "image":"kunwarf/multi-worker",
+            "hostname":"worker",
             "essential": false
+        },
+        {
+            "name":"nginx",
+            "image":"kunwarf/multi-nginx",
+            "hostname":"nginx",
+            "essential": true
         }
     ]
 }
