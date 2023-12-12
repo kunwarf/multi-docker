@@ -5,19 +5,22 @@
             "name":"client",
             "image":"kunwarf/multi-client",
             "hostname":"client",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name":"server",
             "image":"kunwarf/multi-server",
             "hostname":"api",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name":"worker",
             "image":"kunwarf/multi-worker",
             "hostname":"worker",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name":"nginx",
@@ -29,7 +32,12 @@
                     "hostPort":80,
                     "containerPort":80
                 }
-            ]
+            ],
+            "links":[
+                "client","server"
+            ],
+            "memory": 128
+
         }
     ]
 }
